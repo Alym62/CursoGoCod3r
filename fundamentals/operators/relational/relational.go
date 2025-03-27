@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-type Person struct {
+type person struct {
 	Name string
 }
 
@@ -23,8 +23,8 @@ func main() {
 	fmt.Println("data without pointer:", dateOne == dateTwo)
 	fmt.Println("data with 'equals':", dateOne.Equal(dateTwo))
 
-	personOne := Person{Name: "João"}
-	personTwo := Person{Name: "João"}
+	personOne := person{Name: "João"}
+	personTwo := person{Name: "João"}
 
 	fmt.Println("Person:", personOne == personTwo)
 }
