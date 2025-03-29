@@ -18,6 +18,19 @@ func noteToConcept(note float64) string {
 	}
 }
 
+func noteToConceptChallenge(note float64) string {
+	switch {
+	case note >= 9 && note <= 10:
+		return "A"
+	case note >= 8 && note < 9:
+		return "B"
+	case note >= 5 && note < 8:
+		return "C"
+	default:
+		return "D"
+	}
+}
+
 func result(note float64) {
 	if note >= 7 {
 		fmt.Println("Aprovado com nota:", note)
@@ -73,4 +86,7 @@ func main() {
 	default:
 		fmt.Println("Boa noite")
 	}
+
+	resultChallenge := noteToConceptChallenge(10)
+	fmt.Println(resultChallenge)
 }
