@@ -60,6 +60,21 @@ func noteToConceptWithSwitch(note float64) string {
 	}
 }
 
+func types(i interface{}) string {
+	switch i.(type) {
+	case int:
+		return "Inteiro"
+	case float32, float64:
+		return "Real"
+	case string:
+		return "String"
+	case func():
+		return "Função"
+	default:
+		return "Não sei..."
+	}
+}
+
 func main() {
 	result(0.1)
 	result(7.1)
@@ -74,6 +89,7 @@ func main() {
 		fmt.Println("Perdeu!!!", i)
 	}
 
+	// Types of switch
 	conceptWithSwitch := noteToConceptWithSwitch(10)
 	fmt.Println(conceptWithSwitch)
 
@@ -89,4 +105,7 @@ func main() {
 
 	resultChallenge := noteToConceptChallenge(10)
 	fmt.Println(resultChallenge)
+
+	resultTypes := types(1)
+	fmt.Println(resultTypes)
 }
