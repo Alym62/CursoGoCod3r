@@ -63,4 +63,14 @@ func main() {
 
 	conceptWithSwitch := noteToConceptWithSwitch(10)
 	fmt.Println(conceptWithSwitch)
+
+	hour := time.Now()
+	switch {
+	case hour.Hour() < 12:
+		fmt.Println("Bom dia")
+	case hour.Hour() < 18:
+		fmt.Println("Boa tarde")
+	default:
+		fmt.Println("Boa noite")
+	}
 }
