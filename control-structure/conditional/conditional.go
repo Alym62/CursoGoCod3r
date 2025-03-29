@@ -32,6 +32,21 @@ func numberRandom() int {
 	return r.Intn(10)
 }
 
+func noteToConceptWithSwitch(note float64) string {
+	switch note {
+	case 10:
+		fallthrough
+	case 9:
+		return "A"
+	case 8, 7:
+		return "B"
+	case 6, 5:
+		return "C"
+	default:
+		return "D"
+	}
+}
+
 func main() {
 	result(0.1)
 	result(7.1)
@@ -45,4 +60,7 @@ func main() {
 	} else {
 		fmt.Println("Perdeu!!!", i)
 	}
+
+	conceptWithSwitch := noteToConceptWithSwitch(10)
+	fmt.Println(conceptWithSwitch)
 }
