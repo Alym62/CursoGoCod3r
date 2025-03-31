@@ -2,6 +2,14 @@ package main
 
 import "fmt"
 
+func countNumbers() {
+	numbers := [...]int{1, 2, 3, 4, 5} // Compile count
+
+	for index, number := range numbers {
+		fmt.Println("Número: ", index, number)
+	}
+}
+
 func main() {
 	// Arrays are of the same type and static
 	var notes [3]float64
@@ -15,4 +23,6 @@ func main() {
 
 	media := total / float64(len(notes))
 	fmt.Println("Média: ", media)
+
+	countNumbers()
 }
