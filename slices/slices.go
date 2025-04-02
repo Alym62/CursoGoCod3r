@@ -19,4 +19,14 @@ func main() {
 
 	sliceArrThree := sliceArrTwo[:1]
 	fmt.Println(sliceArrThree)
+
+	sliceWithMake := make([]int, 10)
+	sliceWithMake[9] = 10
+	fmt.Println(sliceWithMake)
+
+	sleiceWithMakeAndArr := make([]int, 10, 20)
+	fmt.Println(sleiceWithMakeAndArr, len(sleiceWithMakeAndArr), cap(sleiceWithMakeAndArr))
+
+	sleiceWithMakeAndArr = append(sleiceWithMakeAndArr, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+	fmt.Println(sleiceWithMakeAndArr, len(sleiceWithMakeAndArr), cap(sleiceWithMakeAndArr))
 }
