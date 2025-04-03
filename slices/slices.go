@@ -2,6 +2,19 @@ package main
 
 import "fmt"
 
+// Function to add elements in slice using - append()
+func addFiveElementsInSlice(slice []int) []int {
+	slice = append(slice, 1, 2, 3, 4, 5)
+	return slice
+}
+
+func copyElementsSlice(slice []int) (newSlice []int) {
+	newSlice = make([]int, 2)
+	copy(newSlice, slice)
+
+	return newSlice
+}
+
 func main() {
 	arrayOne := [3]int{1, 2, 3} // Array fixed
 	slice := []int{1, 2, 3}     // Slice with height variable
@@ -40,4 +53,11 @@ func main() {
 	newSlice[0] = 10
 	fmt.Println(newSlice)
 	fmt.Println(newSliceTwo)
+
+	// Understand methods of copy and append
+	var sliceToAdd []int
+	sliceToAdd = addFiveElementsInSlice(sliceToAdd)
+
+	sliceCopy := copyElementsSlice(sliceToAdd)
+	fmt.Println(sliceCopy)
 }
