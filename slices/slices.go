@@ -29,4 +29,15 @@ func main() {
 
 	sleiceWithMakeAndArr = append(sleiceWithMakeAndArr, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 	fmt.Println(sleiceWithMakeAndArr, len(sleiceWithMakeAndArr), cap(sleiceWithMakeAndArr))
+
+	// Access intern array
+	newSlice := make([]int, 10, 20)
+	newSliceTwo := append(newSlice, 1, 2, 3)
+
+	fmt.Println(newSlice)
+	fmt.Println(newSliceTwo)
+
+	newSlice[0] = 10
+	fmt.Println(newSlice)
+	fmt.Println(newSliceTwo)
 }
